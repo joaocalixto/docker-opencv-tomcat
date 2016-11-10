@@ -8,4 +8,8 @@ RUN mkdir -p /opt/opencv-2.4.7/sources/data
 RUN tar -xvf $(pwd)/dataSouce.tar.gz -C /opt/opencv-2.4.7/sources/data/
 RUN rm $(pwd)/dataSouce.tar.gz
 
+# opencv loader
+RUN wget -q https://www.dropbox.com/s/42x50y7ma1igvjq/face-opencv-loader-2.0.0.jar?dl=0 -O $(pwd)/face-opencv-loader-2.0.0.jar
+RUN mv $(pwd)/face-opencv-loader-2.0.0.jar /opt/tomcat/lib
+
 RUN echo Fim
