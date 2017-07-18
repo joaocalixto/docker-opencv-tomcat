@@ -12,4 +12,9 @@ RUN rm $(pwd)/dataSouce.tar.gz
 RUN wget -q https://www.dropbox.com/s/ipne1yvcrbixd1h/face-opencv-loader-2.0.1.jar?dl=0 -O $(pwd)/face-opencv-loader-2.0.1.jar
 RUN mv $(pwd)/face-opencv-loader-2.0.1.jar /opt/tomcat/lib
 
+# opencv loader
+RUN wget -q https://repo1.maven.org/maven2/mysql/mysql-connector-java/5.1.34/mysql-connector-java-5.1.34.jar
+RUN mv $(pwd)/mysql-connector-java-5.1.34.jar /opt/tomcat/lib
+
+
 RUN echo Fim
